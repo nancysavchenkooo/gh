@@ -9,8 +9,8 @@ def selenas(empas):
   url = 'https://b-api.facebook.com/method/auth.login'
   nganuid = str(uuid.uuid4())
   data = {
-    'email': empas.split(':')[0],
-    'password': empas.split(':')[1],
+    'email': empas.split('|')[0],
+    'password': empas.split('|')[1],
     'credentials_type': 'password',
     'error_detail_type': 'button_with_disabled',
     'format': 'json',
