@@ -8,6 +8,7 @@ W = '\033[1;97m'
 def selenas(empas):
   url = 'https://b-api.facebook.com/method/auth.login'
   nganuid = str(uuid.uuid4())
+  ngasouid = 'OAuth 200424423651082|' + uuid.uuid4().hex
   data = {
     'email': empas.split('|')[0],
     'password': empas.split('|')[1],
@@ -24,7 +25,7 @@ def selenas(empas):
   headers = {
     'authority': 'b-api.facebook.com',
     'accept-language': 'en-US,en;q=0.9',
-    'authorization': 'OAuth 200424423651082|2a9918c6bcd75b94cefcbb5635c6ad16',
+    'authorization': ngasouid,
     'user-agent': 'Mozilla/5.0 (Linux; Android 7.0; BLADE L7A Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.196 Mobile Safari/537.36[FBAN/EMA;FBLC/es_LA;FBAV/361.0.0.12.5;]'
     
   }
