@@ -26,7 +26,7 @@ def selenas(empas):
     'authority': 'b-api.facebook.com',
     'accept-language': 'en-US,en;q=0.9',
     'authorization': ngasouid,
-    'user-agent': 'Mozilla/5.0 (Linux; Android 7.0; BLADE L7A Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.196 Mobile Safari/537.36[FBAN/EMA;FBLC/es_LA;FBAV/361.0.0.12.5;]'
+    'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; ALE-L21 Build/HuaweiALE-L21; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.91 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/181.0.0.12.78;]'
     
   }
   
