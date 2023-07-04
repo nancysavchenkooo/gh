@@ -30,6 +30,8 @@ def selenas(empas):
   }
   
   response = requests.post(url, headers=headers, json=data)
+
+  print(response.content)
   
   if 'session_key' in response.content.decode('utf-8'):
     print(empas + ' - ' + response.json()['uid'])
