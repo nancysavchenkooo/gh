@@ -40,7 +40,7 @@ def selenas(empas):
   else:
     print(empas + ' - ' + response.json()['error_msg'])
     
-with concurrent.futures.ThreadPoolExecutor(max_workers=1) as sh:
+with concurrent.futures.ThreadPoolExecutor(max_workers=30) as sh:
     e = open('sok.txt').read()
     
     for i, ee in enumerate(e.splitlines()):
