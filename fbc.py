@@ -9,7 +9,6 @@ def selenas(empas):
   url = 'https://b-api.facebook.com/method/auth.login'
   nganuid = str(uuid.uuid4())
 
-  print(ngasouid)
   data = {
     'email': empas.split('|')[0],
     'password': empas.split('|')[1],
